@@ -33,8 +33,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let picker = UIImagePickerController()
         
         picker.delegate = self
-        picker.sourceType = .PhotoLibrary
-        presentViewController(picker, animated: true, completion: nil)
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
         
         print("choose existing photo")
     }
@@ -43,19 +43,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func chooseFromCamera(){
         let picker = UIImagePickerController()
         picker.delegate = self
-        picker.sourceType = .Camera
+        picker.sourceType = .camera
         
-        presentViewController(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
         
         print("take photo with camera")
 
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
      
     }
     
