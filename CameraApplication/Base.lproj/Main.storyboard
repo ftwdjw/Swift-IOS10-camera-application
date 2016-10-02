@@ -37,7 +37,7 @@
                                     <action selector="chooseFromCamera" destination="BYZ-38-t0r" eventType="touchUpInside" id="TwB-Rw-aqj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="opu-kM-zhB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyParkingPhoto2.png" highlightedImage="MyParkingPhoto2.png" translatesAutoresizingMaskIntoConstraints="NO" id="opu-kM-zhB"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -61,4 +61,7 @@
             <point key="canvasLocation" x="243" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MyParkingPhoto2.png" width="512" height="800"/>
+    </resources>
 </document>

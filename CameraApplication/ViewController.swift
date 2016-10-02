@@ -12,11 +12,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var imageView: UIImageView!
     
+     let picker = UIImagePickerController()
+    
 
     override func viewDidLoad() {//begin
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
         
+       
+        
+        //present(picker, animated: true, completion: nil)
         
     }//end
 
@@ -36,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func chooseFromCamera(){
-        let picker = UIImagePickerController()
+        //let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .camera
          print("\ntake photo with camera\n")
