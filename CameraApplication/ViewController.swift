@@ -12,14 +12,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var imageView: UIImageView!
     
-    
 
     override func viewDidLoad() {//begin
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
         
         
     }//end
@@ -34,9 +30,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         picker.delegate = self
         picker.sourceType = .photoLibrary
+        print("\nchoose existing photo\n")
         present(picker, animated: true, completion: nil)
-        
-        print("choose existing photo")
     }
     
     
@@ -44,17 +39,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .camera
-        
+         print("\ntake photo with camera\n")
         present(picker, animated: true, completion: nil)
-        
-        print("take photo with camera")
-
         
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        UIImageWriteToSavedPhotosAlbum(imageView.image!,nil,nil,nil)
+        
+        print("\nfinish taking pictures with camera\n")
         dismiss(animated: true, completion: nil)
      
     }
